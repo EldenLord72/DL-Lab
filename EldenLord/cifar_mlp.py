@@ -17,3 +17,5 @@ model.compile(optimizer='adam',loss='categorical_crossentropy')
 
 model.fit(x_train,y_train,epochs=10,batch_size=64)
 
+accuracy =model.evaluate(x_test,y_test)
+print(f'accuracy: {accuracy}')

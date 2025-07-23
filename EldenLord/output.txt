@@ -1,0 +1,35 @@
+no of layers : 1
+no of neurons : 10
+activation : softmax
+optimizer : adam
+
+loss : categorical_crossentropy
+no of epochs : 10
+batch+_size : 64
+test_acc : true
+test_loss : false
+
+Epoch 1/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 116.9129
+Epoch 2/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 72.4039
+Epoch 3/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 69.1455
+Epoch 4/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 69.9230
+Epoch 5/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 68.2508
+Epoch 6/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 65.6259
+Epoch 7/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 63.8427
+Epoch 8/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 59.4745
+Epoch 9/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 64.9099
+Epoch 10/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - loss: 64.9834
+313/313 ━━━━━━━━━━━━━━━━━━━━ 0s 924us/step - loss: 77.8325
+accuracy: 78.32565307617188
+
+output : accuracy: 78.32565307617188
