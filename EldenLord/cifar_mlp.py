@@ -4,18 +4,38 @@ from keras.utils import to_categorical
 from keras.datasets import cifar10
 import matplotlib.pyplot as plt
 
-(x_train,y_train),(x_test,y_test)=cifar10.load_data()
+#load data
+(X_train, y_train), (X_test, y_test) = cifar10.load_data()
 
-y_train=to_categorical(y_train)
-y_test=to_categorical(y_test)
+# Preprocess the data
+y_train = to_categorical(y_train)
+y_test = to_categorical(y_test)
 
+#print(y_train[0])
+#plt.imshow(X_train[0])
+#plt.show()
+
+# architecture
 model = Sequential()
-model.add(Flatten(input_shape=(32,32,3)))
-model.add(Dense(units=10,activation='softmax'))
+model.add(Flatten(input_shape=(32, 32, 3)))
+model.add(Dense(units=10, activation='softmax'))
 
-model.compile(optimizer='adam',loss='categorical_crossentropy')
+#compile
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(x_train,y_train,epochs=10,batch_size=64)
+#train
+history = model.fit(X_train, y_train, epochs=10, batch_size=64, validation_split=0.2)
+print(history.history.items())
+print(history.history.keys())
 
-accuracy =model.evaluate(x_test,y_test)
-print(f'accuracy: {accuracy}')
+#evaluate
+loss, accuracy = model.evaluate(X_test, y_test)
+print(f'Test accuracy: {accuracy}, Test loss: {loss}')
+
+#visualize
+plt.plot(history.history['accuracy'], label='train accuracy',color='blue')
+plt.plot(history.history['val_accuracy'], label='validation accuracy',color='red')
+plt.legend()
+plt.title('Epoch vs Accuracy on Train and Validation data')
+plt.show()
+

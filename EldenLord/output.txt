@@ -33,3 +33,10 @@ Epoch 10/10
 accuracy: 78.32565307617188
 
 output : accuracy: 78.32565307617188
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+EXPERIMENT 02
+
+history.history['accuracy'] : true
+history.history['valaccuracy'] : true
+epochs vs accuracy on train and val data : true
